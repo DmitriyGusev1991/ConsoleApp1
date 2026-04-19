@@ -17,6 +17,8 @@ using (var connection = new SqliteConnection(connectionString))
             name TEXT NOT NULL,
             age INTEGER
         )";
+
+
     createTableCmd.ExecuteNonQuery();
     Console.WriteLine("Таблица 'users' создана (или уже существовала)");
 
