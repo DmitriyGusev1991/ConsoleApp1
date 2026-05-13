@@ -12,40 +12,79 @@ namespace ConsoleApp1.Views
     {
         public void ShowMenu()
         {
-            Console.Clear();
-            Console.WriteLine("\n=== Управление пользователями ===");
-            Console.WriteLine("1. Показать всех пользователей");
-            Console.WriteLine("2. Добавить пользователя");
-            Console.WriteLine("3. Обновить пользователя");
-            Console.WriteLine("4. Удалить пользователя");
-            Console.WriteLine("5. Назад");
-            Console.WriteLine("Ваш выбор:");
+            Clear();
+            Console.WriteLine("===Управление пользователями ===");
+            Console.WriteLine("1. Показать всех");
+            Console.WriteLine("2. Поиск");
+            Console.WriteLine("3. Добавить");
+            Console.WriteLine("4. Обновить возраст");
+            Console.WriteLine("5. Удалить");
+            Console.WriteLine("6. Назад");
         }
-        public void ShowUsers(List<User> users)
+        public void ShowSearchMenu()
         {
-            if (users.Count == 0)
-            {
-                ShowMessage("Пользователей нет");
-                return;
-            }
-            Console.WriteLine("Список пользователей:");
-            foreach (var user in users)
-                Console.WriteLine($"[{user.Id}] {user.Name}, {user.Age} лет");
-            WaitForKey();
+            Clear();
+            Console.WriteLine("===Управление поиском пользователя===");
+            Console.WriteLine("1. Поиск по имени пользователя");
+            Console.WriteLine("2. Поиск по id");
+            Console.WriteLine("3. Поиск по id заказа");
+            Console.WriteLine("4. Поиск по наименованию заказа");
+            Console.WriteLine("5. Назад");
+        }
+        protected override string FormatItem<T>(T item)
+        {
+            var user = item as User;
+            if (user == null) throw new ArgumentException("Нет пользователя");
+            return $"[{user.Id}] {user.Name}, {user.Age} лет";
         }
         public (string Name, int Age) AskUserData()
         {
-            string name = AskString("Введите имя: ");
-            int age = AskInt("Введите возраст: ");
+            Clear();
+            string name = AskStringOrCancel("Введите имя: ");
+            int age = AskIntWithValidation("Введите возраст: ", 1, 150);
             return (name, age);
         }
         public int AskUserId(string action)
         {
-            return AskInt($"Введите Id пользоывткл для {action}: ");
+            return AskPositiveInt($"Введите Id пользователя для {action}: ");
         }
         public int AskNewAge()
         {
-            return AskInt("Новый возраст: ")
+            return AskIntWithValidation("Новый возраст: ", 1, 150);
+        }
+        public void ShowUsersWithOrders(List<User> users, string productFilter)
+        {
+            Clear();
+            if (users.Count > 0)
+            {
+                ShowMessage($"===Пользователи заказавшие товар содержащий {productFilter}===");
+                foreach (User user in users)
+                {
+                    ShowMessage($"\n[{user.Id}] {user.Name} (возраст: {user.Age})");
+                    ShowMessage("Заказы:");
+                    var matchingOrders = user.Orders.Where(o => o.Product != null && o.Product.ToLower().Contains(productFilter.ToLower()));
+                    foreach (Order order in matchingOrders)
+                    {
+                        ShowMessage($" - {order.Product}: {order.Amount} руб.");
+                    }
+                }
+            }
+            else ShowMessage("Нет данных");
+                WaitForKey();
+        }
+        public void ShowUserWithOrder(User user, int orderId)
+        {
+            Clear();
+            if (user != null)
+            {
+                ShowMessage($"===Пользователь сделавший заказ с id {orderId}===");
+                ShowMessage($"\n[{user.Id}] {user.Name} (возраст: {user.Age})");
+                ShowMessage("Заказ:");
+                var order = user.Orders.First(o => o.Id == orderId);
+                ShowMessage($" - {order.Product}: {order.Amount} руб.");
+            }
+            else ShowMessage("Нет данных");
+            WaitForKey();
         }
     }
 }
