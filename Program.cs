@@ -5,7 +5,7 @@ using ConsoleApp1.Models;
 
 Console.WriteLine("Добро пожаловать в консольный менеджер пользователей и заказов!");
 
-// Создаём контекст для работы с базой
+
 using (ApplicationContext db = new ApplicationContext())
 {
     db.Database.EnsureCreated();

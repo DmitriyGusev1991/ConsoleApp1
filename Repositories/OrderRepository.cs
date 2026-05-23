@@ -1,4 +1,5 @@
 ﻿using ConsoleApp1.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,15 +17,13 @@ namespace ConsoleApp1.Repositories
         }
         public List<Order> GetOrderByUserName(string name)
         {
-            return _db.Orders.Where(o => o.User.Name.ToLower().Contains(name.ToLower())).ToList();
-        }
-        public string GetUserNameByUserId(int userId)
-        {
-            return _db.Users.Find(userId).Name;
+            var allOrders = _db.Orders.Include(o => o.User).ToList();
+            return allOrders.Where(o => o.User.Name.ToLower().Contains(name.ToLower())).ToList();
         }
         public List<Order> GetOrderByProduct(string Product)
         {
-            return _db.Orders.Where(o => o.Product.ToLower().Contains(Product.ToLower())).ToList();
+            var allOrders = _db.Orders.Include(o => o.User).ToList();
+            return allOrders.Where(o => o.Product.ToLower().Contains(Product.ToLower())).ToList();
         }
         public bool TransferOrder (int orderId, int NewUserId)
         {

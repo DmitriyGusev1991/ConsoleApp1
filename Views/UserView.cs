@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp1.Common;
 using ConsoleApp1.Models;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 
@@ -37,18 +38,26 @@ namespace ConsoleApp1.Views
             if (user == null) throw new ArgumentException("Нет пользователя");
             return $"[{user.Id}] {user.Name}, {user.Age} лет";
         }
-        public (string Name, int Age) AskUserData()
+        public InputResult<(string Name, int Age)> AskUserData()
         {
             Clear();
-            string name = AskStringOrCancel("Введите имя: ");
-            int age = AskIntWithValidation("Введите возраст: ", 1, 150);
-            return (name, age);
+            var nameResult = AskString("Введите имя (или нажмите Enter для выхода): ");
+            if (nameResult.IsCancelled)
+                return InputResult<(string, int)>.Cancel();
+            if (nameResult.IsError)
+                return InputResult<(string, int)>.Error(nameResult.ErrorMessage);
+            var ageResult = AskIntWithValidation("Введите возраст (или нажмите Enter для выхода): ", 1, 150);
+            if (ageResult.IsCancelled)
+                return InputResult<(string, int)>.Cancel();
+            if (ageResult.IsError)
+                return InputResult<(string, int)>.Error(ageResult.ErrorMessage);
+            return InputResult<(string, int)>.Success((nameResult.Value,ageResult.Value));
         }
-        public int AskUserId(string action)
+        public InputResult<int> AskUserId(string action)
         {
-            return AskPositiveInt($"Введите Id пользователя для {action}: ");
+            return AskPositiveInt($"Введите Id пользователя для {action} (или для выхода нажмите Enter): ");
         }
-        public int AskNewAge()
+        public InputResult<int> AskNewAge()
         {
             return AskIntWithValidation("Новый возраст: ", 1, 150);
         }
@@ -70,7 +79,6 @@ namespace ConsoleApp1.Views
                 }
             }
             else ShowMessage("Нет данных");
-                WaitForKey();
         }
         public void ShowUserWithOrder(User user, int orderId)
         {
@@ -84,7 +92,6 @@ namespace ConsoleApp1.Views
                 ShowMessage($" - {order.Product}: {order.Amount} руб.");
             }
             else ShowMessage("Нет данных");
-            WaitForKey();
         }
     }
 }

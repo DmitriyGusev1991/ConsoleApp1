@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp1.Common;
 
 namespace ConsoleApp1.Views
 {
@@ -38,7 +39,6 @@ namespace ConsoleApp1.Views
                 Console.WriteLine("Нет данных!");
             else
                 Console.WriteLine($"{FormatItem(item)}");
-            WaitForKey();
         }
         protected abstract string FormatItem<T> (T item);
         public void ShowError(string error)
@@ -53,7 +53,6 @@ namespace ConsoleApp1.Views
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"V {success}");
             Console.ResetColor();
-            WaitForKey();
         }
 
         public void Clear()
@@ -71,71 +70,58 @@ namespace ConsoleApp1.Views
             var result = Console.ReadLine()?.ToLower() == "y";
             return result;
         }
-        public int AskInt (string promt)
+        public InputResult<int> AskInt (string promt)
         {
-            while (true)
-            {
-                Console.Write(promt);
-                if (int.TryParse(Console.ReadLine(), out int result))
-                    return result;
-                ShowError("Введите корректое число");
-            }
-        }
-        public int AskIntOrCansel(string promt)
-        {
-            while (true)
-            {
-                Console.Write($"{promt} Enter - для выхода");
+            Console.Write(promt);
                 string value = Console.ReadLine();
                 if (string.IsNullOrEmpty(value))
-                    return int.MinValue; //верни не число а картеж, с булевой составляющей. Тогда дальше уже можно смело менять на -1
-                if (int.TryParse(Console.ReadLine(), out int result))
+                    return InputResult<int>.Cancel();
+                if (int.TryParse(value, out int result))
+                    return InputResult<int>.Success(result);
+                return InputResult<int>.Error("Введите целое число");
+        }
+        public InputResult<int> AskIntWithValidation(string promt, int min, int max)
+        {
+            while (true)
+            {
+                var result = AskInt(promt);
+                if (result.IsCancelled) return InputResult<int>.Cancel();
+                if (result.IsError)
+                {
+                    ShowError(result.ErrorMessage);
+                    continue;
+                }
+                if (result.Value >= min && result.Value <= max)
                     return result;
-                ShowError("Введите корректое число или нажмите Enter для выхода");
-            }
-        }
-        public int AskIntWithValidation(string promt, int min, int max)
-        {
-            while (true)
-            {
-                int value = AskIntOrCansel(promt);
-                if (value >= min && value <= max || value == -1)
-                    return value;
                 ShowError($"Значение должно быть от {min} до {max}");
+
             }
         }
-        public int AskPositiveInt(string promt)
+        public InputResult<int> AskPositiveInt(string promt)
         {
             while (true)
             {
-                int value = AskIntOrCansel(promt);
-                if (value > 0 || value == -1)
-                    return value;
+                var result = AskInt(promt);
+                if (result.IsCancelled) return InputResult<int>.Cancel();
+                if (result.IsError)
+                {
+                    ShowError(result.ErrorMessage);
+                    continue;
+                }
+                if (result.Value > 0)
+                    return result;
                 ShowError("Значение должно быть положительным");
             }
         }
-        public string AskString(string promt)
+        public InputResult <string> AskString(string promt)
         {
-            Clear();
             while (true)
             {
                 Console.Write(promt);
-                string result = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(result))
-                    return result;
-                ShowError("Значение не может быть пустым");
-            }
-        }
-        public string AskStringOrCancel(string promt)
-        {
-            Clear();
-            while (true)
-            {
-                Console.Write($"{promt} Enter - отмена");
-                string result = Console.ReadLine();
-                if (!string.IsNullOrEmpty(result))
-                    return result;
-                else return null;
+                string value = Console.ReadLine();
+                if (string.IsNullOrEmpty(value))
+                    return InputResult<string>.Cancel();
+                return InputResult<string>.Success(value);
             }
         }
     }

@@ -33,6 +33,7 @@ namespace ConsoleApp1.Controllers
         }
         private bool ProcessChoice(string choice)
         {
+            _userView.Clear();
             switch (choice)
             {
                 case "1":
@@ -43,26 +44,37 @@ namespace ConsoleApp1.Controllers
                     SearchMode();
                     break;
                 case "3":
-                    var (name, age) = _userView.AskUserData();
-                    if (name == null || age == -1)
+                    var userDate = _userView.AskUserData();
+                    if (userDate.IsCancelled)
                     {
                         _userView.ShowMessage("Операция отклонена");
+                        _userView.WaitForKey();
                         break;
                     }
-                    var user = new User(name, age);
+                    if (userDate.IsError)
+                    {
+                        _userView.ShowError(userDate.ErrorMessage);
+                        _userView.WaitForKey();
+                        break;
+                    }
+                    var user = new User(userDate.Value.Name, userDate.Value.Age);
                     _userRepository.Add(user);
-                    _userView.ShowSuccess($"Пользователь {name} добавлен");
+                    _userView.ShowSuccess($"Пользователь {userDate.Value.Name} добавлен");
+                    _userView.WaitForKey();
                     break;
                 case "4":
                     UpdateUser();
+                    _userView.WaitForKey();
                     break;
                 case "5":
                     DeleteUser();
+                    _userView.WaitForKey();
                     break;
                 case "6":
                     return true;
                 default:
                     _userView.ShowMessage("Неверный выбор. Пожалуйста введите число от 1 о 5.");
+                    _userView.WaitForKey();
                     break;
             }
             return false;
@@ -73,6 +85,7 @@ namespace ConsoleApp1.Controllers
             {
                 _userView.ShowSearchMenu();
                 var choice = Console.ReadLine();
+                _userView.Clear();
                 switch (choice)
                 {
                     case "1":
@@ -93,28 +106,43 @@ namespace ConsoleApp1.Controllers
                         _userView.ShowMessage("Неверный выбор. Пожалуйста введите число от 1 о 5.");
                         break;
                 }
-                _userView.WaitForKey();
             }
         }
         private void SearchByName()
         {
-            string name = _userView.AskString("Введите имя пользователя или его часть ");
-            _userView.ShowList(_userRepository.GetUserByName(name), $"Найдены пользователи имя которых включает {name}");
+            var name = _userView.AskString("Введите имя пользователя или его часть (для выхода нажмите Enter)");
+            if (!name.IsCancelled)
+            {
+                _userView.ShowList(_userRepository.GetUserByName(name.Value), $"Найдены пользователи имя которых включает {name.Value}");
+                _userView.WaitForKey();
+            }
         }
         private void SearchById()
         {
-            int id = _userView.AskInt("Введите id Пользователя ");
-            _userView.ShowItem(_userRepository.GetById(id), $"Найден пользователь c id {id}");
+            var id = _userView.AskInt("Введите id Пользователя (для выхода нажмите Enter)");
+            if (!id.IsCancelled)
+            {
+                _userView.ShowItem(_userRepository.GetById(id.Value), $"Найден пользователь c id {id.Value}");
+                _userView.WaitForKey();
+            }
         }
         private void SearchByProduct()
         {
-            string product = _userView.AskString("Введите наименование продукта в заказе или его часть ");
-            _userView.ShowUsersWithOrders(_userRepository.GetUserByProduct(product), product);
+            var product = _userView.AskString("Введите наименование продукта в заказе или его часть (для выхода нажмите Enter)");
+            if (!product.IsCancelled)
+            {
+                _userView.ShowUsersWithOrders(_userRepository.GetUserByProduct(product.Value), product.Value);
+                _userView.WaitForKey();
+            }
         }
         private void SearchByOrderId()
         {
-            int orderId = _userView.AskInt("Введите id заказа ");
-            _userView.ShowUserWithOrder(_userRepository.GetUserByOrderId(orderId), orderId);
+            var orderId = _userView.AskInt("Введите id заказа (для выхода нажмите Enter)");
+            if (!orderId.IsCancelled)
+            {
+                _userView.ShowUserWithOrder(_userRepository.GetUserByOrderId(orderId.Value), orderId.Value);
+                _userView.WaitForKey();
+            }
         }
         private void UpdateUser()
         {
@@ -126,14 +154,24 @@ namespace ConsoleApp1.Controllers
                 return;
             }
             _userView.ShowList(users, "Доступные пользователи");
-            int id = _userView.AskUserId("обновления");
-            var existUser = _userRepository.GetById(id);
+            var id = _userView.AskUserId("обновления");
+            if (id.IsCancelled)
+            {
+                _userView.ShowMessage("операция отменена");
+                return;
+            }
+            var existUser = _userRepository.GetById(id.Value);
             if (existUser == null)
                 _userView.ShowError("Пользователь не найден");
             else
             {
-                int newAge = _userView.AskNewAge();
-                _userRepository.Update(existUser, newAge);
+                var newAge = _userView.AskNewAge();
+                if (newAge.IsCancelled)
+                {
+                    _userView.ShowMessage("операция отменена");
+                    return;
+                }    
+                _userRepository.Update(existUser, newAge.Value);
                 _userView.ShowSuccess("Возраст обновления");
             }
         }
@@ -147,8 +185,13 @@ namespace ConsoleApp1.Controllers
                 return;
             }
             _userView.ShowList(users, "Доступные пользователи");
-            int deleteId = _userView.AskUserId("удаления");
-            var userToDelete = _userRepository.GetByIdWithOrder(deleteId);
+            var deleteId = _userView.AskUserId("удаления");
+            if (deleteId.IsCancelled)
+            {
+                _userView.ShowMessage("операция отменена");
+                return;
+            }
+            var userToDelete = _userRepository.GetByIdWithOrder(deleteId.Value);
             if (userToDelete != null)
             {
                 if (userToDelete.Orders.Any() && !_userView.AskConfirmation("У пользователя есть заказы. Удалить всё?"))

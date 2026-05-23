@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\controllers\\ordercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:controllers\\ordercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\views\\baseview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:views\\baseview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,36 +15,28 @@
       "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:views\\userview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\views\\orderview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:views\\orderview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\controllers\\ordercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:controllers\\ordercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\views\\mainmenuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,16 +47,24 @@
       "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\models\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:models\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\common\\inputresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:common\\inputresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\consoleapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:consoleapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|c:\\users\\semen\\source\\repos\\consoleapp1\\models\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8398F701-9B35-4180-A8B5-848E55AE6BC1}|ConsoleApp1.csproj|solutionrelative:models\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,33 +82,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
+              "Title": "InputResult.cs",
+              "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Common\\InputResult.cs",
+              "RelativeDocumentMoniker": "Common\\InputResult.cs",
+              "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Common\\InputResult.cs",
+              "RelativeToolTip": "Common\\InputResult.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAIAwwCQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T08:56:17.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Repositories\\Repository.cs",
               "RelativeDocumentMoniker": "Repositories\\Repository.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Repositories\\Repository.cs",
               "RelativeToolTip": "Repositories\\Repository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T09:27:41.22Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "BaseView.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Views\\BaseView.cs",
               "RelativeDocumentMoniker": "Views\\BaseView.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Views\\BaseView.cs",
               "RelativeToolTip": "Views\\BaseView.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAqwFoAAACFAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAEwB4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T10:17:26.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "MainMenuView.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Views\\MainMenuView.cs",
               "RelativeDocumentMoniker": "Views\\MainMenuView.cs",
@@ -112,30 +128,31 @@
               "RelativeToolTip": "Views\\MainMenuView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-26T16:37:42.764Z"
+              "WhenOpened": "2026-04-26T16:37:42.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "OrderView.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Views\\OrderView.cs",
               "RelativeDocumentMoniker": "Views\\OrderView.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Views\\OrderView.cs",
               "RelativeToolTip": "Views\\OrderView.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAEwCsAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAvwDsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T09:29:32.587Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserView.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Views\\UserView.cs",
               "RelativeDocumentMoniker": "Views\\UserView.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Views\\UserView.cs",
               "RelativeToolTip": "Views\\UserView.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAEwCsAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAowCUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T09:29:02.831Z",
               "EditorCaption": ""
@@ -148,33 +165,33 @@
               "RelativeDocumentMoniker": "Controllers\\MainController.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Controllers\\MainController.cs",
               "RelativeToolTip": "Controllers\\MainController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T11:41:47.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "OrderControler.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Controllers\\OrderControler.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderControler.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Controllers\\OrderControler.cs",
               "RelativeToolTip": "Controllers\\OrderControler.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAawKAAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAuwBABAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T09:26:53.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAawC0AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAApwIUAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T09:25:57.299Z",
               "EditorCaption": ""
@@ -187,26 +204,27 @@
               "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T09:28:01.915Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Repositories\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\OrderRepository.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Repositories\\OrderRepository.cs",
               "RelativeToolTip": "Repositories\\OrderRepository.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwB8AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T09:28:17.935Z"
+              "WhenOpened": "2026-04-22T09:28:17.935Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -214,12 +232,11 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAwBMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T11:53:05.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T11:53:05.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ApplicationContext.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Models\\ApplicationContext.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationContext.cs",
@@ -231,25 +248,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T12:41:51.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Models\\Order.cs",
               "ToolTip": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\Models\\Order.cs",
               "RelativeToolTip": "Models\\Order.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAB4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowB4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-19T11:56:41.153Z"
             },
