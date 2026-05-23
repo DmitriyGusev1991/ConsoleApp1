@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nndqhgAMrL0=",
+  "dgSpecHash": "Gsl6Y64dAjE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\semen\\source\\repos\\ConsoleApp1\\ConsoleApp1.csproj",
+  "projectFilePath": "C:\\Users\\semen\\source\\repos\\CRUDapp\\CRUDapp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\semen\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\semen\\.nuget\\packages\\microsoft.data.sqlite\\10.0.6\\microsoft.data.sqlite.10.0.6.nupkg.sha512",
